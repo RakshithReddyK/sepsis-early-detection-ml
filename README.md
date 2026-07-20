@@ -301,7 +301,7 @@ Earlier versions of this README presented several of these as already implemente
 
 ---
 
-## Why This Project Matters (Portfolio Angle)
+## Why This Project Matters
 
 This project demonstrates the ability to:
 
