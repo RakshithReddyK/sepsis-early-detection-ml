@@ -1,41 +1,132 @@
 {
-  "roc_auc": 1.0,
-  "pr_auc": 1.0,
-  "confusion_matrix": [
+  "feature_columns": [
+    "age",
+    "bmi",
+    "systolic_bp",
+    "diastolic_bp",
+    "glucose",
+    "cholesterol",
+    "creatinine",
+    "diabetes",
+    "hypertension",
+    "sex_Female",
+    "sex_Male",
+    "sex_Other"
+  ],
+  "dropped_leakage_columns": [
+    "readmission_30d",
+    "mortality",
+    "diagnosis_Heart Failure",
+    "diagnosis_Normal",
+    "diagnosis_Pneumonia",
+    "diagnosis_Sepsis"
+  ],
+  "n_rows": 18716,
+  "class_balance": {
+    "1": 9358,
+    "0": 9358
+  },
+  "cv_scheme": "RepeatedStratifiedKFold(n_splits=5, n_repeats=5)",
+  "cv_roc_auc_mean": 0.9373057611570766,
+  "cv_roc_auc_std": 0.0039557306888920556,
+  "cv_pr_auc_mean": 0.9530389232657425,
+  "cv_pr_auc_std": 0.0026629621041939482,
+  "cv_roc_auc_folds": [
+    0.9347247618982394,
+    0.9398431754123898,
+    0.941806195096548,
+    0.9319045873361747,
+    0.9356357665584016,
+    0.944193473089707,
+    0.937577087530321,
+    0.9362264854481583,
+    0.9403652292982864,
+    0.931093883475631,
+    0.9423684733179926,
+    0.9370660257552296,
+    0.9343416953318077,
+    0.9444751367018872,
+    0.9293696923807827,
+    0.931888314750895,
+    0.9371224138561124,
+    0.9354136402673282,
+    0.9421996270105569,
+    0.9390544557734563,
+    0.9399857435714808,
+    0.9388464621962751,
+    0.934246192447021,
+    0.9363102824487111,
+    0.9365852279735231
+  ],
+  "cv_pr_auc_folds": [
+    0.9509522073413849,
+    0.954767971994027,
+    0.9562262009998249,
+    0.949738155795159,
+    0.9520483786972777,
+    0.9581680511760633,
+    0.9536336425957674,
+    0.9523382196119882,
+    0.9543436278721749,
+    0.9495416398677219,
+    0.956279898337429,
+    0.9532297989197814,
+    0.9513670566904925,
+    0.9574216377143783,
+    0.9472988551817934,
+    0.9492436345203838,
+    0.9532487027070246,
+    0.9518248830084564,
+    0.9558091563561092,
+    0.9543958002525168,
+    0.9544810578091121,
+    0.9546329306122251,
+    0.9499343362777202,
+    0.9532651357738948,
+    0.9517821015308533
+  ],
+  "out_of_fold_roc_auc": 0.9365415418990902,
+  "out_of_fold_pr_auc": 0.9525254164853058,
+  "out_of_fold_confusion_matrix": [
     [
-      1872,
-      0
+      9352,
+      6
     ],
     [
-      0,
-      1872
+      2683,
+      6675
     ]
   ],
-  "classification_report": {
+  "out_of_fold_classification_report": {
     "0": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 1872.0
+      "precision": 0.7770668882426257,
+      "recall": 0.9993588373584099,
+      "f1-score": 0.8743046791006404,
+      "support": 9358.0
     },
     "1": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 1872.0
+      "precision": 0.9991019308486754,
+      "recall": 0.7132934387689678,
+      "f1-score": 0.8323461562441549,
+      "support": 9358.0
     },
-    "accuracy": 1.0,
+    "accuracy": 0.8563261380636888,
     "macro avg": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 3744.0
+      "precision": 0.8880844095456506,
+      "recall": 0.8563261380636888,
+      "f1-score": 0.8533254176723977,
+      "support": 18716.0
     },
     "weighted avg": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 3744.0
+      "precision": 0.8880844095456506,
+      "recall": 0.8563261380636888,
+      "f1-score": 0.8533254176723976,
+      "support": 18716.0
     }
+  },
+  "artifacts": {
+    "model": "models/sepsis_gb_model.joblib",
+    "confusion_matrix_plot": "reports/figures/confusion_matrix.png",
+    "pr_curve_plot": "reports/figures/pr_curve.png"
   }
 }
